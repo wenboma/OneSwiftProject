@@ -9,11 +9,19 @@
 import UIKit
 import ReactiveCocoa
 
+
 @objc class ViewController: UIViewController {
 
     let userNameTextField = UITextField()
     let passWordTextField = UITextField()
     let loginButton = UIButton(type: UIButtonType.Custom)
+    
+    var str  = "12233"
+    
+    class Test : NSObject{
+        var tt = "123"
+    }
+    var test = Test()
     
     override func viewDidLoad() {
         
@@ -302,9 +310,7 @@ import ReactiveCocoa
 //            return number.boolValue == true ? UIColor.redColor() : UIColor.greenColor()
 //        })
         
-        self.loginButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (obj) -> Void in
-            print("touch")
-        }
+        
 
         RACSignal.combineLatest([validPasswordSignal, validUsernameSignal]).map { (obj) -> AnyObject! in
             let tu = obj as! RACTuple
@@ -316,13 +322,33 @@ import ReactiveCocoa
             self.loginButton.enabled = obj.boolValue
         }
         
-        
-        let single = self.signInSignal()
-        single.subscribeNext { (obj : AnyObject!) -> Void in
+        RACObserve(self.userNameTextField, keyPath: "hidden").subscribeNext { (obj) -> Void in
             print(obj)
         }
         
+        RACObserve(self.test, keyPath: "tt").subscribeNext { (obj ) -> Void in
+            print(obj)
+        }
         
+      
+        
+        self.loginButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).flattenMap({ (obj : AnyObject!) -> RACStream! in
+            return self.signInSignal()
+        }).subscribeNext { (obj) -> Void in
+//            print(obj)
+//            print("touch")
+            
+            self.userNameTextField.hidden = !self.userNameTextField.hidden
+            
+            self.test.tt = "aaaaaa"
+            
+
+        }
+        
+        
+    
+    
+    
     }
     func isValidUsername(text:NSString) -> NSNumber{
         return NSNumber(bool: text.length > 3)
