@@ -16,24 +16,9 @@ import ReactiveCocoa
     let passWordTextField = UITextField()
     let loginButton = UIButton(type: UIButtonType.Custom)
     
-    var str : String = "1111"  {
-//        set {
-////            didChangeValueForKey("str")
-//            str = newValue
-//        }
-//        get {
-//           return str
-//        }
-        
-        didSet{
-            didChangeValueForKey("str")
-        }
-    }
+    dynamic var str : Int = 67
     
-    class Test : NSObject{
-        var tt = "123"
-    }
-    var test = Test()
+    dynamic var ary = [34,45,56]
     
     override func viewDidLoad() {
         
@@ -338,7 +323,7 @@ import ReactiveCocoa
             print(obj)
         }
         
-        RACObserve(self, keyPath: "str").subscribeNext { (obj ) -> Void in
+        RACObserve(self, keyPath: "ary").subscribeNext { (obj ) -> Void in
             print(obj)
         }
         
@@ -352,15 +337,10 @@ import ReactiveCocoa
             
             self.userNameTextField.hidden = !self.userNameTextField.hidden
             
-//            self.test.tt = "aaaaaa"
-            self.str = "aaaaa"
-            
+            self.ary += [45]
 
+        
         }
-        
-        
-    
-    
     
     }
     func isValidUsername(text:NSString) -> NSNumber{
