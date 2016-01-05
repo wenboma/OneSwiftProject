@@ -317,7 +317,10 @@ import ReactiveCocoa
         }
         
         
-        
+        let single = self.signInSignal()
+        single.subscribeNext { (obj : AnyObject!) -> Void in
+            print(obj)
+        }
         
         
     }
@@ -326,6 +329,14 @@ import ReactiveCocoa
     }
     func isValidPassword(text: NSString) -> NSNumber{
         return NSNumber(bool: text.length > 3)
+    }
+    
+    func signInSignal() -> RACSignal {
+        return RACSignal.createSignal({ (subscriber:RACSubscriber!) -> RACDisposable! in
+            let t : AnyObject = "123"
+            subscriber.sendNext(t)
+            return nil
+        })
     }
     
     
