@@ -306,6 +306,7 @@ import ReactiveCocoa
         }
         
         
+        
 //        RAC(self.userNameTextField,"backgroundColor") <~ validUsernameSignal.map({ (obj) -> AnyObject! in
 //            let number: NSNumber = obj as! NSNumber
 //            return number.boolValue == true ? UIColor.redColor() : UIColor.greenColor()
