@@ -301,6 +301,10 @@ import ReactiveCocoa
             return self.isValidPassword(text)
         }
         
+        RACSignal.merge([self.passWordTextField.rac_textSignal(), self.userNameTextField.rac_textSignal()]).subscribeNext { (obj ) -> Void in
+            print("==========",obj,obj.classForCoder)
+        }
+        
         
 //        RAC(self.userNameTextField,"backgroundColor") <~ validUsernameSignal.map({ (obj) -> AnyObject! in
 //            let number: NSNumber = obj as! NSNumber
@@ -338,9 +342,16 @@ import ReactiveCocoa
             self.userNameTextField.hidden = !self.userNameTextField.hidden
             
             self.ary += [45]
-
-        
         }
+        
+        NSNotificationCenter.defaultCenter().rac_addObserverForName("Notification", object: nil).subscribeNext { (obj:AnyObject!) -> Void in
+            let notifi = obj as! NSNotification
+            
+            print(notifi.userInfo!["A"])
+            print(notifi.object)
+        }
+        NSNotificationCenter.defaultCenter().postNotificationName("Notification", object: "123", userInfo: ["A":"456"])
+    
     
     }
     func isValidUsername(text:NSString) -> NSNumber{
@@ -356,6 +367,7 @@ import ReactiveCocoa
             subscriber.sendNext(t)
             return nil
         })
+    
     }
     
     
