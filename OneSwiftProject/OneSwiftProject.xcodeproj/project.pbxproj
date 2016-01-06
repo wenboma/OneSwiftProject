@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		240E770F1C3BA8C300173990 /* GBRAC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E770E1C3BA8C300173990 /* GBRAC+Extension.swift */; };
+		2414456D1C3CAF64000FBEEE /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414456C1C3CAF64000FBEEE /* FaceView.swift */; };
+		2414456F1C3CAFA3000FBEEE /* FaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2414456E1C3CAFA3000FBEEE /* FaceView.xib */; };
+		2480DBAA1C3D0D5C002D8094 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480DBA91C3D0D5C002D8094 /* MainViewController.swift */; };
+		2480DBAC1C3D13EC002D8094 /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2480DBAB1C3D13EC002D8094 /* SecondStoryboard.storyboard */; };
 		24F55F011C2A342800CD1CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F55F001C2A342800CD1CB3 /* AppDelegate.swift */; };
 		24F55F031C2A342800CD1CB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F55F021C2A342800CD1CB3 /* ViewController.swift */; };
 		24F55F061C2A342800CD1CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F55F041C2A342800CD1CB3 /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		240E770E1C3BA8C300173990 /* GBRAC+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GBRAC+Extension.swift"; sourceTree = "<group>"; };
+		2414456C1C3CAF64000FBEEE /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		2414456E1C3CAFA3000FBEEE /* FaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceView.xib; sourceTree = "<group>"; };
+		2480DBA91C3D0D5C002D8094 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2480DBAB1C3D13EC002D8094 /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondStoryboard.storyboard; sourceTree = "<group>"; };
 		24F55EFD1C2A342800CD1CB3 /* OneSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F55F001C2A342800CD1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F55F021C2A342800CD1CB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +73,12 @@
 			children = (
 				24F55F001C2A342800CD1CB3 /* AppDelegate.swift */,
 				24F55F021C2A342800CD1CB3 /* ViewController.swift */,
+				2414456C1C3CAF64000FBEEE /* FaceView.swift */,
+				2480DBA91C3D0D5C002D8094 /* MainViewController.swift */,
+				2414456E1C3CAFA3000FBEEE /* FaceView.xib */,
 				240E770E1C3BA8C300173990 /* GBRAC+Extension.swift */,
 				24F55F041C2A342800CD1CB3 /* Main.storyboard */,
+				2480DBAB1C3D13EC002D8094 /* SecondStoryboard.storyboard */,
 				24F55F071C2A342800CD1CB3 /* Assets.xcassets */,
 				24F55F091C2A342800CD1CB3 /* LaunchScreen.storyboard */,
 				24F55F0C1C2A342800CD1CB3 /* Info.plist */,
@@ -154,7 +166,9 @@
 			files = (
 				24F55F0B1C2A342800CD1CB3 /* LaunchScreen.storyboard in Resources */,
 				24F55F081C2A342800CD1CB3 /* Assets.xcassets in Resources */,
+				2480DBAC1C3D13EC002D8094 /* SecondStoryboard.storyboard in Resources */,
 				24F55F061C2A342800CD1CB3 /* Main.storyboard in Resources */,
+				2414456F1C3CAFA3000FBEEE /* FaceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +230,8 @@
 				24F55F031C2A342800CD1CB3 /* ViewController.swift in Sources */,
 				240E770F1C3BA8C300173990 /* GBRAC+Extension.swift in Sources */,
 				24F55F011C2A342800CD1CB3 /* AppDelegate.swift in Sources */,
+				2414456D1C3CAF64000FBEEE /* FaceView.swift in Sources */,
+				2480DBAA1C3D0D5C002D8094 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 import ReactiveCocoa
 
 
-@objc class ViewController: UIViewController {
+@objc class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     let userNameTextField = UITextField()
     let passWordTextField = UITextField()
@@ -353,6 +353,9 @@ import ReactiveCocoa
         NSNotificationCenter.defaultCenter().postNotificationName("Notification", object: "123", userInfo: ["A":"456"])
     
     
+    
+        
+        
     }
     func isValidUsername(text:NSString) -> NSNumber{
         return NSNumber(bool: text.length > 3)
@@ -369,6 +372,20 @@ import ReactiveCocoa
         })
     
     }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if(indexPath.row % 2 == 0){
+            let cell1 = tableView.dequeueReusableCellWithIdentifier("cell1")
+            return cell1!
+        }else{
+            let cell2 = tableView.dequeueReusableCellWithIdentifier("cell2")
+            return cell2!
+        }
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
     
     
 }
