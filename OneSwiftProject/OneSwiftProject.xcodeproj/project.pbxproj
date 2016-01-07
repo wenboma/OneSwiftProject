@@ -26,6 +26,7 @@
 		2414456E1C3CAFA3000FBEEE /* FaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceView.xib; sourceTree = "<group>"; };
 		2480DBA91C3D0D5C002D8094 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2480DBAB1C3D13EC002D8094 /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondStoryboard.storyboard; sourceTree = "<group>"; };
+		2480DC121C3D1DD5002D8094 /* TestTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F55EFD1C2A342800CD1CB3 /* OneSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F55F001C2A342800CD1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F55F021C2A342800CD1CB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +40,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2480DC0E1C3D1DD5002D8094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24F55EFA1C2A342800CD1CB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				24F55EFD1C2A342800CD1CB3 /* OneSwiftProject.app */,
+				2480DC121C3D1DD5002D8094 /* TestTarget.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,7 +114,35 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2480DC0F1C3D1DD5002D8094 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		2480DC111C3D1DD5002D8094 /* TestTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2480DC171C3D1DD5002D8094 /* Build configuration list for PBXNativeTarget "TestTarget" */;
+			buildPhases = (
+				2480DC0D1C3D1DD5002D8094 /* Sources */,
+				2480DC0E1C3D1DD5002D8094 /* Frameworks */,
+				2480DC0F1C3D1DD5002D8094 /* Headers */,
+				2480DC101C3D1DD5002D8094 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTarget;
+			productName = TestTarget;
+			productReference = 2480DC121C3D1DD5002D8094 /* TestTarget.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		24F55EFC1C2A342800CD1CB3 /* OneSwiftProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24F55F0F1C2A342800CD1CB3 /* Build configuration list for PBXNativeTarget "OneSwiftProject" */;
@@ -136,6 +173,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = UK;
 				TargetAttributes = {
+					2480DC111C3D1DD5002D8094 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					24F55EFC1C2A342800CD1CB3 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -155,11 +195,19 @@
 			projectRoot = "";
 			targets = (
 				24F55EFC1C2A342800CD1CB3 /* OneSwiftProject */,
+				2480DC111C3D1DD5002D8094 /* TestTarget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2480DC101C3D1DD5002D8094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24F55EFB1C2A342800CD1CB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +271,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2480DC0D1C3D1DD5002D8094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24F55EF91C2A342800CD1CB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +312,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2480DC181C3D1DD5002D8094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UOKO.UokerApp.TestTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2480DC191C3D1DD5002D8094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UOKO.UokerApp.TestTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		24F55F0D1C2A342800CD1CB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OneSwiftProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UOKO.UokerApp.OneSwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OneSwiftProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UOKO.UokerApp.OneSwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +470,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2480DC171C3D1DD5002D8094 /* Build configuration list for PBXNativeTarget "TestTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2480DC181C3D1DD5002D8094 /* Debug */,
+				2480DC191C3D1DD5002D8094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		24F55EF81C2A342800CD1CB3 /* Build configuration list for PBXProject "OneSwiftProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
