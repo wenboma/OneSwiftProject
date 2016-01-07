@@ -70,6 +70,21 @@ func KeyWindow () -> UIWindow {
     return ((UIApplication.sharedApplication().delegate?.window)!)!
 }
 
+//viewWithXib
+func ViewWithXib (name : String , owner : AnyObject) -> UIView {
+   return NSBundle.mainBundle().loadNibNamed(name, owner: owner, options: nil).first as! UIView
+}
+
+//RGB
+func RGB (r: CGFloat ,g: CGFloat ,b : CGFloat) -> UIColor {
+    return UIColor(red: CGFloat(r/255.0), green: CGFloat(g/255.0), blue: CGFloat(b/255.0), alpha: 1)
+}
+
+//RGBA 
+func RGBA (r: CGFloat ,g: CGFloat ,b : CGFloat , a : CGFloat) -> UIColor {
+    return UIColor(red: CGFloat(r/255.0), green: CGFloat(g/255.0), blue: CGFloat(b/255.0), alpha: a)
+}
+
 
 
 
