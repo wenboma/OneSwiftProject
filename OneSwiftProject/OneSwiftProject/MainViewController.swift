@@ -20,7 +20,39 @@ class MainViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+        
+//        self.signal()
     
+        self.buffer()
+        
+    
+    }
+    func signal () {
+        let (signal, sink) = Signal<String, NoError>.pipe()
+        
+        
+        signal.observeNext { (value) -> () in
+            print(value)
+        }
+        
+        sink.sendNext("131")
+        
+        sink.sendNext("456")
+        
+        sink.sendNext("789")
+
+    }
+  
+    func buffer () {
+        
+        let (single, pipe) = Signal<String, NoError>.pipe()
+        let (producer , sink) = SignalProducer<String, NoError>.buffer()
+        
+        single.observe(sink)
+        sink.sendNext("11")
+        producer.startWithNext { (value) -> () in
+            print(value)
+        }
+    }
     
 }
